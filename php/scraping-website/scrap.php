@@ -13,8 +13,15 @@ $curl = curl_init($url);
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
 
 // FYI: tutsplus pakai layanan cloudflare
-// dimana cloudflare punya fitur untuk mendeteksi robot yang mengakses website
+// dimana cloudflare punya fitur untuk mendeteksi robot yang mengakses website 
+// jadi jika curl kita dideteksi sebagai robot, kita bukan mendapatkan kode HTML halaman yang diincar
+// melainkan halaman(kode HTML) gerbang autentikasi dari cloudflare untuk memasukkan kode captcha terlebih dahulu
+// ---------------------------------------------------------------------------------------------------------------
 // opsi curl dibawah ini untuk men-setting useragent saat curl me-request website tersebut
+// ini membuat cloudflare (untuk saat ini atau beberapa waktu kedepan) 
+// menganggap curl mengakses website tersebut dengan menggunakan browser layaknya kita(manusia) mengakses website
+// NB: string useragent bisa didapat dengan cara membuka console pada browser, kemudian ketikkan navigator.userAgent
+//     atau menggunakan PHP $_SERVER['HTTP_USER_AGENT']
 curl_setopt($curl, CURLOPT_USERAGENT, "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/38.0.2125.111 Safari/537.36");
 
 // eksekusi curl, dan simpan response ke dalam variable $html
