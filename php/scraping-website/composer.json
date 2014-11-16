@@ -1,0 +1,6 @@
+{
+	"require": {
+		"symfony/dom-crawler": "2.5.*",
+		"symfony/css-selector": "2.5.*"
+	}
+}
