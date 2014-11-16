@@ -1,6 +1,8 @@
 [PHP] Scraping Website dengan cURL dan Symfony DomCrawler
 =========================================================
 
+![scraping](https://dl.dropboxusercontent.com/u/102070675/repo-tutorial/php-scraping-with-curl-and-symfony-domcrawler.png)
+
 Tutorial ini membahas tentang bagaimana cara scraping website
 menggunakan cURL dan komponen Symfony DomCrawler.
 
