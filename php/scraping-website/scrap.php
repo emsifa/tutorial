@@ -9,7 +9,7 @@ $url = "http://code.tutsplus.com/";
 // inisiasi curl session
 $curl = curl_init($url);
 
-// aktifkan returntransfer, gunanya supaya response dari curl dapat disimpan ke variable (baris 21)
+// aktifkan returntransfer, gunanya supaya response dari curl dapat disimpan ke variable (baris 28)
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
 
 // FYI: tutsplus pakai layanan cloudflare
